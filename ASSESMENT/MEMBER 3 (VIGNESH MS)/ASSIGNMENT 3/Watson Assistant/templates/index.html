@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HOME</title>
+</head>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "6c98c602-fed8-4eb0-aa19-b8700863bc40", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "b66c1f15-e86e-49c4-83bd-a6bfb803b44c", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+<body>
+     <center>
+    <h1>HOSPITAL HOME PAGE</h1>
+    <h1>Hospital Chatbot is embedded to provide answers to queries</h1>
+    <h3>Click the icon in bottom right corner to open chatbot</h3>
+    <h2>Type 'Hi' to begin the conversation</h2> 
+  </center>
+
+</body>
+</html>
