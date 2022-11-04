@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-deploy
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-deploy
+  template:
+    metadata:
+      labels:
+        app: flask-deploy
+
+    spec:
+      containers:
+        - name: assignment-4
+          image: jp.icr.io/shrruthi/assignment_4
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP
